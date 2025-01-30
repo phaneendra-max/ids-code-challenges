@@ -1,0 +1,59 @@
+# Event Scheduler and Conflict Detector
+
+This project is a simple web-based Event Scheduler that allows users to manage daily events. The application includes features to detect conflicting events and suggest resolutions. Additionally, users can edit existing events for better schedule management.
+
+## Features
+
+1. **Add/Edit Events**
+   - Users can view, edit, and update events via a graphical interface.
+
+2. **Conflict Detection**
+   - Detects overlapping events in the schedule.
+
+3. **Conflict Resolution**
+   - Suggests alternative time slots for conflicting events within user-defined working hours.
+
+4. **Interactive Interface**
+   - Events are displayed in an organized list with the ability to edit or view conflict details.
+
+5. **Working Hours**
+   - Automatically considers user-defined working hours (default: 08:00 - 18:00) for scheduling and suggestions.
+
+## File Structure
+
+```
+|-- index.html            # Main HTML file containing the structure of the interface
+|-- styles.css            # CSS file for styling the interface
+|-- script.js             # JavaScript file for application logic
+|-- README.md             # Documentation for the project
+```
+
+## How to Use
+
+1. Clone or download this repository to your local machine.
+2. Open the `index.html` file in a web browser.
+3. View the event list and detect conflicts using the "Detect Conflicts" button.
+4. Edit an event by clicking on it in the event list. The event's details will appear in the edit form.
+5. Make changes and click "Update Event" to save the updates.
+6. Check the "Conflict Suggestions" section for suggested resolutions.
+
+## Technologies Used
+
+- **HTML**: For the basic structure of the application.
+- **CSS**: For styling the user interface.
+- **JavaScript**: For event management, conflict detection, and interactivity.
+
+## Future Enhancements
+
+1. Add functionality to allow users to create new events.
+2. Implement drag-and-drop for event reordering.
+3. Add persistent storage (e.g., LocalStorage or a database) to save events across sessions.
+4. Display events in a calendar-like view for better visualization.
+
+## Authors
+
+- [Your Name]
+
+## License
+
+This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT).

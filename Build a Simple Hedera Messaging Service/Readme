@@ -1,0 +1,87 @@
+# Simple Hedera Messaging Service (HMS)
+
+This project demonstrates how to build a simple messaging service using the **Hedera Consensus Service (HCS)**. The application allows you to send and receive encrypted messages over the Hedera network, and also filter messages based on a keyword.
+
+## Prerequisites
+
+Before running the service, ensure you have the following installed:
+
+1. **Node.js and npm** (Node Package Manager)
+   - Install Node.js (which includes npm) from the [official website](https://nodejs.org/).
+   - After installation, verify by running the following commands in your terminal/command prompt:
+     ```bash
+     node -v
+     npm -v
+     ```
+     These should output the Node.js and npm version, confirming the installation.
+
+2. **Hedera Account**
+   - You need a Hedera testnet account to interact with the Hedera network. You can create one on the [Hedera Portal](https://portal.hedera.com/).
+   - Once created, you’ll have an **Account ID** and **Private Key** which are required for authentication.
+
+# Hedera Messaging Service
+
+## Overview
+
+This project demonstrates how to use **Hedera Consensus Service (HCS)** to send, encrypt, retrieve, and filter messages on the Hedera network. It includes:
+
+- **Message Encryption (AES-256)**: Encrypts messages before sending.
+- **Message Decryption**: Decrypts received messages.
+- **Keyword Filtering**: Displays only messages that contain a specific keyword.
+
+### -> Install Hedera SDK & Dependencies
+
+Run the following command to install required dependencies:
+
+```sh
+npm install @hashgraph/sdk crypto dotenv
+```
+
+### ->. Set up Environment Variables
+
+Create a **.env** file in the root directory and add your Hedera credentials:
+
+```sh
+MY_ACCOUNT_ID=0.0.xxxxxx
+MY_PRIVATE_KEY=your-private-key-here
+```
+
+---
+
+## Step-by-Step Execution
+
+### 1. Create a Topic on Hedera
+
+Run the script to create a new HCS topic:
+
+```sh
+node createTopic.js
+```
+
+**Output:** It will return a **topic ID**, which you need for the next steps.
+
+### 2. Send Encrypted Messages
+
+Replace `topicId` in **sendMessage.js** with your generated Topic ID, then execute:
+
+```sh
+node sendMessage.js
+```
+
+**Output:** Messages will be encrypted and sent to Hedera.
+
+### 3. Receive and Decrypt Messages
+
+Modify **receiveMessages.js** to use your topic ID. Run:
+
+```sh
+node receiveMessages.js
+```
+
+**Output:** Messages will be decrypted and displayed. Only messages containing the specified keyword will be shown.
+
+---
+
+##
+
+##

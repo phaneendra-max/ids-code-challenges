@@ -1,0 +1,16 @@
+{
+    "name": "hedera-messaging-service",
+    "version": "1.0.0",
+    "description": "A simple messaging service on the Hedera network using the Hedera Consensus Service (HCS)",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "@hashgraph/sdk": "^2.1.2",
+      "crypto": "^1.0.1"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+  

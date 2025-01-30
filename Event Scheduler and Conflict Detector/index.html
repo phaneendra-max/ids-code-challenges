@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Event Scheduler</h1>
+
+    <div>
+        <h2>Event List</h2>
+        <div id="eventList"></div>
+        <button onclick="suggestResolutions()">Detect Conflicts</button>
+    </div>
+
+    <div class="suggestions">
+        <h2>Conflict Suggestions</h2>
+        <div id="suggestions"></div>
+    </div>
+
+    <div class="edit-event">
+        <h2>Edit Event</h2>
+        <form id="editForm">
+            <label for="eventName">Event Name:</label>
+            <input type="text" id="eventName" required>
+
+            <label for="eventStart">Start Time:</label>
+            <input type="time" id="eventStart" required>
+
+            <label for="eventEnd">End Time:</label>
+            <input type="time" id="eventEnd" required>
+
+            <button type="button" onclick="editEvent()">Update Event</button>
+        </form>
+    </div>
+</body>
+</html>
